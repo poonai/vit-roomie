@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div id="modal1" class="modal">
+   <div class="modal-content">
+     <h4>Find your ********</h4>
+     <div class="row">
+       <form class="col s12" action="/post" method="post">
+         <div class="row">
+           <div class="input-field col s4">
+             <input placeholder="regno" name="regno" id="first_name" type="text" class="validate">
+             <label for="regno">Regno</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s4">
+             <input placeholder="branch" name="branch" id="first_name" type="text" class="validate">
+             <label for="branch">branch</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s4">
+             <input placeholder="presentRoomNo" name="branch" id="first_name" type="text" class="validate">
+             <label for="presentRoomNo">preset room no</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s4">
+             <input placeholder="requirements" name="branch" id="first_name" type="text" class="validate">
+             <label for="requirementss">requirements</label>
+           </div>
+         </div>
+     <input type="submit" class="btn" name="" value="post">
+       </form>
+     </div>
+   </div>
+ </div>
+    <div class="navbar-fixed">
+   <nav>
+     <div class="nav-wrapper">
+       <a href="#!" class="brand-logo center">Vit Rommie</a>
+       <ul class="right hide-on-med-and-down">
+         <li><a href="#modal1">Post</a></li>
+       </ul>
+     </div>
+   </nav>
+ </div>
+
+ <%for(i=0;i<posts.length;i++){%>
+   <%=posts[i].requirements%>
+   <%}%>
+  </body>
+  <script type="text/javascript">
+
+$(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});
+  </script>
+</html>
